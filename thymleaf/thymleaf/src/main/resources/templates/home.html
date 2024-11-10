@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page Thymleaf Example</title>
+    <script type="text/javascript" th:src="@{js/main.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{css/main.css}"></link>
+</head>
+<body>
+    <h1>This is the Thymleaf Example</h1>
+    <h1 th:text="${name}"></h1>
+    <h2 th:text="${#strings.toUpperCase(name)}"></h2>
+    <div th:with="someVariable=${someValue}, a=20, b=30">
+        <p th:text=" 'Value of a*b :'+${a}*${b}"></p>
+    </div>
+
+    <button id="click-button" onclick="main()">Click Here</button>
+</body>
+</html>

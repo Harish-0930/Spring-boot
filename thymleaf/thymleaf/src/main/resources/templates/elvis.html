@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>elvis operator example</title>
+</head>
+<body>
+<h1>Elvis (ternary operator) example</h1>
+<p th:text="${isAdmin}? 'Welcome Admin' : 'Not Known Admin' "></p>
+
+<h1>If else Example</h1>
+<p th:if="${isAdmin}">You are admin</p>
+<p th:if="${gender} == 'male' ">Male</p>
+<p th:unless="${gender} == 'male' ">Female</p>
+
+<h1>Switch example</h1>
+<div th:switch="${gender}">
+    <p th:case="male">You are male</p>
+    <p th:case="female">You are female</p>
+    <p th:case="*">No gender specified</p>
+</div>
+</body>
+</html>
